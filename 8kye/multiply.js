@@ -12,7 +12,7 @@
 // assert.strictEqual(multiply(3,5), 15); 
 // assert.strictEqual(multiply(5,0), 0);
 // assert.strictEqual(multiply(0,5), 0);
-// assert.strictEqual(multiply(0,0), 0); 
+// assert.strictEqual(multiply(0,0), 0);
 
 // SOLUTION (РЕШЕНИЕ)
 function multiply(a, b){
