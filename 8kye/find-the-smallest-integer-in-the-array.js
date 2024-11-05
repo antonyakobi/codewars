@@ -20,17 +20,19 @@
 
 // SOLUTION (РЕШЕНИЕ)
 
-function findSmallestInt(arr) {
-	return Math.min(...arr)
-}
+// function findSmallestInt(arr) {
+// 	return Math.min(...arr)
+// }
 
 // ИЛИ
 
-// function findSmallestInt(arr) {
-	
-	
-// 	return 0
-// }
+function findSmallestInt(arr) {
+	let result = arr[0]
+	for (let i = 0; i < arr.length; i++) {
+		result = result < arr[i] ? result : arr[i];
+	}
+	return result
+}
 
 
 console.log(findSmallestInt([78,56,232,12,8]));

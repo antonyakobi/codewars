@@ -20,10 +20,10 @@
 // ИЛИ 
 
 function arrayPlusArray(arr1, arr2) {
-	let suma=0;
-	for(let i=0;i<arr1.length;i++)
+	let suma = 0;
+	for(let i = 0; i < arr1.length; i++)
 		suma += arr1[i];
-	for(let i=0;i<arr2.length;i++)
+	for(let i = 0; i < arr2.length; i++)
 		suma += arr2[i];
 	return suma;
 }
