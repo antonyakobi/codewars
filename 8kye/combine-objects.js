@@ -45,6 +45,21 @@ function combine(...objects) {
 		return resultObj
 }	
 
+// Ещё варик 
+
+// function combine(...args) {
+//     let result = {};
+//     for (let i = 0; i < args.length; i++) {
+//         for (let key in args[i]) {
+//             if (result[key]) {
+//                 result[key] = result[key] + args[i][key];
+//             }
+//             else (result[key] = args[i][key]);
+//         };
+//     };
+//     return result;
+// }
+
 // Как вариант через аргументы. 
 
 // function combine(){
