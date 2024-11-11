@@ -40,9 +40,9 @@ function combine(...objects) {
 	for (let i = 0; i < objects.length; i++) {
 		for (const key in objects[i]) {
 			resultObj[key] = resultObj[key] ? resultObj[key] + objects[i][key] : objects[i][key]
-			}
 		}
-		return resultObj
+	}
+return resultObj
 }	
 
 // Ещё варик 
