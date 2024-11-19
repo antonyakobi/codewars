@@ -21,6 +21,14 @@
 // SOLUTION (РЕШЕНИЕ)
 
 function getMiddle(s) {
-	//Code goes here!
-	return '';
+	let middleIndex = s.length / 2;
+	if (s.length % 2) {
+		// Если он нечетный, мы всегда получаем остаток 1
+		return s.charAt(middleIndex);
+	} else {
+		// иначе строка будет четной
+		return s.slice(middleIndex - 1, middleIndex + 1);
+	}
 }
+
+
