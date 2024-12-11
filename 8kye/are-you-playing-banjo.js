@@ -42,5 +42,3 @@ console.log(areYouPlayingBanjo("Paul"));
 console.log(areYouPlayingBanjo("Ringo"));
 console.log(areYouPlayingBanjo("bravo"));
 console.log(areYouPlayingBanjo("rolf"));
-
-are-you-playing-banjo
