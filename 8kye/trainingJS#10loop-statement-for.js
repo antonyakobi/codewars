@@ -7,8 +7,6 @@
 // В функции я определил два массива odd и even, а также написал оператор return. Ваша задача - написать цикл for.
 // Если вы забыли, как вставлять элемент в массив, обратитесь к уроку 4.
 
-
-
 // TESTS
 // Test.assertSimilar(pickIt([1,2]),[[1],[2]]);
 // Test.assertSimilar(pickIt([1,2,3]),[[1,3],[2]]);
@@ -19,18 +17,22 @@
 
 // SOLUTION (РЕШЕНИЕ)
 
-function pickIt(arr){
-  var odd=[],even=[];
-  //coding here
-  
-  
-  return [odd,even];
+function pickIt(arr) {
+    let odd = [],
+        even = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 1) {
+            odd.push(arr[i]);
+        } else {
+            even.push(arr[i]);
+        }
+    }
+    return [odd, even];
 }
 
-console.log(pickIt([1,2]))
-console.log(pickIt([1,2,3]))
-console.log(pickIt([3,2,1]))
-console.log(pickIt([10,20,30]))
-console.log(pickIt([11,21,31]))
-console.log(pickIt([8,1,5,4,6,1,1]))
-
+console.log(pickIt([1, 2]));
+console.log(pickIt([1, 2, 3]));
+console.log(pickIt([3, 2, 1]));
+console.log(pickIt([10, 20, 30]));
+console.log(pickIt([11, 21, 31]));
+console.log(pickIt([8, 1, 5, 4, 6, 1, 1]));
