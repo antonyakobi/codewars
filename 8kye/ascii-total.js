@@ -18,7 +18,11 @@
 // SOLUTION (РЕШЕНИЕ)
 
 function uniTotal (string) {
-	// total up dem unicodes!
+	let sum = 0; // Инициализируем сумму как 0
+    for (let i = 0; i < string.length; i++) { // Проходим по каждому символу в строке
+        sum += string.charCodeAt(i); // Получаем код символа и добавляем к общей сумме
+    }
+    return sum; // Возвращаем итоговую сумму
 }
 
 console.log(uniTotal(""));
