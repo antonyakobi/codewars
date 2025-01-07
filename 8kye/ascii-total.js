@@ -33,3 +33,4 @@ console.log(uniTotal("d"));
 console.log(uniTotal("e"));
 console.log(uniTotal("aaa"));
 console.log(uniTotal("Mary Had A Little Lamb"));
+
