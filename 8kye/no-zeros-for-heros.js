@@ -22,8 +22,34 @@
 
 // SOLUTION (РЕШЕНИЕ)
 
+// function noBoringZeros(n) {
+//     // Если число равно нулю, просто возвращаем его
+//     if (n === 0) {return 0;}
+//     // Преобразуем число в строку и отрезаем конечные нули
+//     let trimmed = String(n).replace(/0+$/, '');
+//     // Преобразуем обратно в число
+//     return parseInt(trimmed);
+// }
+
+// ИЛИ
+
+// function noBoringZeros(n) {
+//     // Проверяем, является ли число нулем
+//     if (n === 0) return 0;
+//     // Пока число заканчивается на 0, делим его на 10
+//     while (n % 10 === 0) {
+//         n = Math.floor(n / 10);
+//     }
+//     return n; // Возвращаем число без конечных нулей
+// }
+
+// ИЛИ 
+
 function noBoringZeros(n) {
-    // your code
+    while (n % 10 === 0 && n !== 0) {
+        n = n / 10
+    }
+    return n
 }
 
 console.log(noBoringZeros(1450));
