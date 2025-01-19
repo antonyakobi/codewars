@@ -8,19 +8,29 @@
 
 // В этом кате мы сделаем функцию для проверки того, является ли период поздним. Наша функция будет принимать три параметра: last - объект Date с датой последнего периода today - объект Date с датой проверки cycleLength - целое число, представляющее длину цикла в днях Возвращает true, если количество дней, прошедших от last до today, больше cycleLength. В противном случае возвращается false.
 
-// TESTS 
+// TESTS
 // it("It is not late", () => {assert.isFalse(periodIsLate(new Date(2016, 6, 13), new Date(2016, 7, 16), 35));});
 // it("It is late", () => {assert.isTrue(periodIsLate(new Date(2016, 6, 13), new Date(2016, 7, 16), 28));});
 
 // SOLUTION (РЕШЕНИЕ)
 
 function periodIsLate(last, today, cycleLength) {
-	const numberDaysLast = last.getTime() / (1000 * 3600 * 24)
-	const numberDaysToday = today.getTime() / (1000 * 3600 * 24)
-	const diferenceDays = numberDaysToday - numberDaysLast
+    const numberDaysLast = last.getTime() / (1000 * 3600 * 24);
+    const numberDaysToday = today.getTime() / (1000 * 3600 * 24);
+    const diferenceDays = numberDaysToday - numberDaysLast;
 
-	return diferenceDays > cycleLength
-} // ПОД ВОПРОСОМ, ПРОВЕРИТЬ 
+    return diferenceDays > cycleLength;
+} // ПОД ВОПРОСОМ, ПРОВЕРИТЬ
 
+// ИЛИ
 
+function periodIsLate(last, today, cycleLength) {
+    return (today - last) / 86400000 > cycleLength;
+}
 
+// ИЛИ
+
+function periodIsLate(last, today, cycleLength) {
+    const day = 24 * 60 * 60 * 1000;
+    return (today - last) / day > cycleLength;
+}
